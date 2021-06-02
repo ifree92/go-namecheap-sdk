@@ -102,6 +102,8 @@ type Record struct {
 	IsDDNSEnabled      bool   `xml:"IsDDNSEnabled,attr"`
 }
 
+var a = 30
+
 // return a map[string]string of differences between two Records
 func (r *Record) diff(other *Record) map[string]string {
 	out := make(map[string]string)
