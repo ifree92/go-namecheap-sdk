@@ -8,7 +8,7 @@ test: check
 	go test -v ./...
 
 build: check
-	go build github.com/adamdecaf/namecheap
+	go build github.com/namecheap/go-namecheap-sdk
 
 deps:
 	dep ensure

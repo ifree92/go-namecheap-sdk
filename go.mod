@@ -1,4 +1,4 @@
-module github.com/adamdecaf/namecheap
+module github.com/namecheap/go-namecheap-sdk
 
 require github.com/hashicorp/go-cleanhttp v0.5.1
 
