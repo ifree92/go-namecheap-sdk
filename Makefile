@@ -1,14 +1,11 @@
-.PHONY: test vet
+default: check test build
 
 check:
 	go vet ./...
 	go fmt ./...
 
-test: check
+test:
 	go test -v ./...
 
-build: check
+build:
 	go build github.com/namecheap/go-namecheap-sdk
-
-deps:
-	dep ensure
