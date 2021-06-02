@@ -35,7 +35,7 @@ func (c *Client) SetNS(domain string, servers []string) ([]string, error) {
 	if err != nil {
 		return nil, err
 	}
-	if ret.CommandResponse.DomainDNSSetCustomResult.Updated == false {
+	if !ret.CommandResponse.DomainDNSSetCustomResult.Updated {
 		var errorBuf bytes.Buffer
 		for _, responseError := range ret.Errors {
 			errorBuf.WriteString("Number: ")
@@ -98,7 +98,7 @@ func (c *Client) ResetNS(domain string) error {
 	if err != nil {
 		return err
 	}
-	if ret.CommandResponse.DomainDNSSetDefaultResult.Updated == false {
+	if !ret.CommandResponse.DomainDNSSetDefaultResult.Updated {
 		var errorBuf bytes.Buffer
 		for _, responseError := range ret.Errors {
 			errorBuf.WriteString("Number: ")

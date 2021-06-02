@@ -104,7 +104,7 @@ type Record struct {
 
 // return a map[string]string of differences between two Records
 func (r *Record) diff(other *Record) map[string]string {
-	out := make(map[string]string, 0)
+	out := make(map[string]string)
 
 	if r.Name != other.Name {
 		out["Name"] = fmt.Sprintf("%q vs %q", r.Name, other.Name)

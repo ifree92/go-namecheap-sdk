@@ -62,7 +62,7 @@ func (c *Client) SetHosts(domain string, records []Record) ([]Record, error) {
 	if err != nil {
 		return nil, err
 	}
-	if ret.CommandResponse.DomainDNSSetHostsResult.IsSuccess == false {
+	if !ret.CommandResponse.DomainDNSSetHostsResult.IsSuccess {
 		var errorBuf bytes.Buffer
 		for _, responseError := range ret.Errors {
 			errorBuf.WriteString("Number: ")
