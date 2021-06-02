@@ -80,7 +80,7 @@ func (c *Client) SetHosts(domain string, records []Record) ([]Record, error) {
 	return newRecords, nil
 }
 
-// GetRecords retrieves all the records for the given domain.
+// GetHosts retrieves all the records for the given domain.
 func (c *Client) GetHosts(domain string) ([]Record, error) {
 	var recordsResponse RecordsResponse
 	var domainSplit = strings.Split(domain, ".")

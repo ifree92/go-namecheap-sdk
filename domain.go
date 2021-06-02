@@ -2,7 +2,7 @@ package namecheap
 
 import "fmt"
 
-// GetDomains retrieves all the domains avaialble on account.
+// GetDomains retrieves all the domains available on account.
 func (c *Client) GetDomains() ([]Domain, error) {
 	var domainsResponse DomainsResponse
 	params := map[string]string{

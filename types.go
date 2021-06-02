@@ -134,7 +134,7 @@ func (r *Record) diff(other *Record) map[string]string {
 	return out
 }
 
-// "Equal" in the sense that clients would see them as the same
+// Equal in the sense that clients would see them as the same
 func (r *Record) Equal(other *Record) bool {
 	return len(r.diff(other)) == 0
 }

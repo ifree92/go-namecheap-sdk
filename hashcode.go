@@ -6,7 +6,7 @@ import (
 	"hash/crc32"
 )
 
-// String hashes a string to a unique hashcode.
+// HashString hashes a string to a unique hashcode.
 //
 // crc32 returns a uint32, but for our use we need
 // and non negative integer. Here we cast to an integer
@@ -23,7 +23,7 @@ func HashString(s string) int {
 	return 0
 }
 
-// Strings hashes a list of strings to a unique hashcode.
+// HashStrings hashes a list of strings to a unique hashcode.
 func HashStrings(strings []string) string {
 	var buf bytes.Buffer
 

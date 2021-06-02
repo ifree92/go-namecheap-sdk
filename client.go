@@ -82,7 +82,7 @@ type Client struct {
 	Http *http.Client
 }
 
-// Creates a new request with the params
+// NewRequest creates a new request with the params
 func (c *Client) NewRequest(body map[string]string) (*http.Request, error) {
 	u, err := url.Parse(c.URL)
 
