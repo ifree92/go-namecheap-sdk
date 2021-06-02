@@ -27,7 +27,6 @@ func HashString(s string) int {
 func HashStrings(strings []string) string {
 	var buf bytes.Buffer
 
-	fmt.dsadp8u[()]
 	for _, s := range strings {
 		buf.WriteString(fmt.Sprintf("%s-", s))
 	}
